@@ -1,0 +1,14 @@
+popup Active_User {
+	$string = '';
+	foreach $user (users()){
+		$string = $string . "$user \n";
+	}
+	show_message($string);
+}
+
+popup C2_Localip {
+	show_message(localip());
+}
+
+menubar('C2 Active User','Active_User');
+menubar('C2 Local IP','C2_Localip');
